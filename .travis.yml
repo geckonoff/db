@@ -4,7 +4,14 @@ python:
 install:
 - pip install ansible==2.3.0 molecule apache-libcloud molecule-docker
 script:
-- molecule --debug test
+- cd db
+# Molecule Testing Travis-locally with Docker
+#- molecule test
+# Run Molecule test on GCP
+- molecule create --scenario-name gcp-gce-ubuntu
+- molecule converge --scenario-name gcp-gce-ubuntu
+- molecule verify --scenario-name gcp-gce-ubuntu
+- molecule destroy --scenario-name gcp-gce-ubuntu
 after_script:
 - molecule --debug destroy
 env:
