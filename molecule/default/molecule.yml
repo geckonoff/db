@@ -15,9 +15,9 @@ platforms:
   #  zone: "{{ item.zone }}"
   #  machine_type: "{{ item.machine_type }}"
   #  image: "{{ item.image }}"
-    service_account_email: "{{ lookup('env', 'GCE_SERVICE_ACCOUNT_EMAIL') }}"
+    service_account_email: mysac-1312@infra-313712.iam.gserviceaccount.com
     credentials_file: "{{ lookup('env', 'GCE_CREDENTIALS_FILE') }}"
-    project_id: "{{ lookup('env', 'GCE_PROJECT_ID') }}"
+    project_id: infra-313712
 provisioner:
   name: ansible
   lint: |
