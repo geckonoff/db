@@ -16,7 +16,7 @@ platforms:
   #  machine_type: "{{ item.machine_type }}"
   #  image: "{{ item.image }}"
     service_account_email: mysac-1312@infra-313712.iam.gserviceaccount.com
-    credentials_file: "{{ lookup('env', 'GCE_CREDENTIALS_FILE') }}"
+    credentials_file: secrets.tar
     project_id: infra-313712
 provisioner:
   name: ansible
