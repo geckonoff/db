@@ -3,8 +3,8 @@ dependency:
   name: galaxy
 driver:
   name: gce
-lint: |
-  yamllint
+  #lint: |
+    #yamllint
 platforms:
   - name: instance-travis
     zone: europe-west1-b
