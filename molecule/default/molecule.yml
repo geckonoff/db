@@ -6,11 +6,11 @@ driver:
   #lint: |
     #yamllint
 platforms:
-  #  - name: instance-travis
   # zone: europe-west1-b
   # machine_type: f1-micro
   # image: ubuntu-1604-xenial-v20170919
   - name: instance
+    gather_facts: no
     instance_names: "{{ item.name }}"
     zone: "{{ item.zone }}"
     machine_type: "{{ item.machine_type }}"
