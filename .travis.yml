@@ -7,9 +7,9 @@ script:
 # Molecule Testing Travis-locally with Docker
 #- molecule test
 # Run Molecule test on GCP
-- molecule --debug create 
-- molecule --debug converge
-- molecule --debug verify
+- molecule create 
+- molecule converge
+- molecule verify
 after_script:
 - molecule --debug destroy
 env:
